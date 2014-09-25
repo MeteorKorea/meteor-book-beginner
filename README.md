@@ -6,6 +6,6 @@ Meteor Book for beginners
 ## 차례
 미티어 소개  
 미티어 배우기 전에   
-미티어 설치, 삭제  
+[미티어 설치, 삭제](install.md)  
 첫 앱, Hello World!  
 
