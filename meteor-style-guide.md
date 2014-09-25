@@ -66,20 +66,20 @@ Single-line arrays don't get that space though:
 
 samples.concat([1, 2, 3]), not samples.concat([ 1, 2, 3 ])
 
-Comments
+### 주석(Comments)
 
-Code should be well commented. Make sure to document the most important pieces of information for both users of the code and future maintainers of the code.
+좋은 코드는 주석이 잘 작성되어 있어야 한다. 현재의 개발자나 미래의 유지보수 담당자에게 중요한 부분은 반드시 문서화하여야 한다.  
 
-Most functions should begin with a comment explaining what they do, what arguments they take, and what they return. A good function comment allows developers to use a function without having to read it's source.
+대부분의 함수는 그 기능, 매개변수, 그리고 리턴값을 설명하는 주석으로 시작하여야 한다. 함수에 대한 주석이 잘 작성되어 있으면 개발자는 그 소스코드를 읽어보지 않고도 업무를 수행할 수 있게된다. 
 
-Most files should start with a comment explaining what functionality is in the file. A good file comment allows developers to understand how the different pieces in the system fit together without having to read a lot of code.
+대부분의 파일은 어떤 기능이 있는지를 기술하는 주석으로 시작하여야 한다. 파일 주석이 잘 작성되어 있으면, 개발자들은 시스템의 각각의 부분이 서로 어떻게 구성되어 있는 지를 코드를 읽지 않고도 알 수 있게 된다.
 
-Also comment liberally inside functions. For example, objects saved as class members should note what the object keys and values are. Any tricky bits of code should have a comment explaining what is going on. Focus on documenting why the code is the way it is, not what it does.
+또한, 주석은 함수 내부에서도 작성될 수 있다. 예를 들면, 클래스 속성으로 저장되는 객체는 그 키값과 대상값이 무엇인지를 알아야 한다. 다소 기교적인 코드가 있다면 이를 기술하는 주석이 있는 것이 좋다. 코드의 기능이 무엇인지를 설명하기보다는 그 코드가 무엇을 의도하는 지를 기술하는 데에 초점을 맞추어야 한다.
 
-Generally prefer // comments to /*. Use /* comments when putting a comment in the middle of a statement. Javadoc /** style comments are OK for function definitions.
+일반적으로 `/*`보다는 `//`를 선호한다. 코드 라인의 중간에 주석을 삽입할 때에 `/*`를 사용하도록 한다. 함수 정의에 대한 주석에 Javadoc의 `/**` 방식의 주석을 사용하는 것도 좋다.
 
-Bad:
-
+나쁨:
+```
 var Whirlygig = function (name) {
   var self = this;
   self.name = name;
@@ -100,8 +100,10 @@ _.extend(Whirlygig.prototype, {
     });
   }
 });
-Good:
+```
 
+좋음:
+```
 // A Whirlygig represents a remote client's view of the global Weasel.
 // It can receive arbitrary values from the network and save them
 // for later use.
@@ -130,15 +132,17 @@ _.extend(Whirlygig.prototype, {
     });
   }
 });
-Comments should be grammatically correct English text
+```
 
-For example, avoid spelling mistakes and run-on sentences. Many people judge the quality of software in part by the quality of the comments, so it's important that your writing reflect well on the project. At least when it comes to grammar, take the same care in writing comments as you would in writing a post on the Meteor blog.
+주석은 문법적으로 올바르게 작성하여야 한다.
 
-Use the Oxford comma unless there is a good reason not to. That is, in a list of three or more items, include a comma after the next-to-last item. Right: "I dedicate this book to my parents, Ayn Rand, and God." Wrong: "I dedicate this book to my parents, Ayn Rand and God." (Theresa Nielson Hayden) But sometimes there is in fact a good reason to omit the Oxford comma. ("To my mother, Ayn Rand, and God.")
+예를 들면, 오타나 복잡한 문장은 피하도록 하라. 많은 이들이 소프트웨어의 품질을 부분적으로는 주석의 품질로 판단한다. 그러므로, 프로젝트에서 이를 잘 반영하는 것이 중요하다. 
 
-The period goes outside the parenthetical when the parenthetical is a sentence fragment (as in this example). (But the period goes inside the parenthetical when the parenthetical is a complete sentence that stands by itself, as in this case.) As Stack Overflow puts it, "the sentence should still be valid if you remove the parentheses and everything inside them."
+특별한 이유가 없다면, 옥스포드 쉼표를 사용하라. 즉, 세 가지 이상의 항목이 있는 목록에서 마지막 항목앞에 쉼표를 사용하라는 것이다. 올바름: "I dedicate this book to my parents, Ayn Rand, and God." 틀림: "I dedicate this book to my parents, Ayn Rand and God." 후자의 경우는 부모가 Ayn Rand와 신이라는 뜻으로 해석된다. 경우에 따라서는 옥스포드 쉼표를 생략하는 것이 더 합당한 경우도 있다.
 
-Use camelCase for identifiers
+문장의 일부를 괄호로 표기할 때, 마침표는 괄호 바깥에서 사용한다 (이 경우처럼). (하지만, 괄호 내부가 온전한 문장인 경우에는 마침표를 괄호 내부에 사용하기도 한다.) 괄호와 그 내부의 문장을 모두 제거하였을 때, 문장은 여전히 유효하여야 한다.
+
+### Camel 표기방식을 사용하라
 
 Functions should be named like doAThing, not do_a_thing.
 
