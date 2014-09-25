@@ -8,21 +8,23 @@
 모든 미티어앱은 다음의 가이드라인에 따라서 작성하기를 권고합니다.
 
 
-Commit messages
+### 커밋 메시지
 
-The first line of a commit should be 50 characters or less. This is a soft limit, so that git's command line output is more readable. Use this line as a clear summary of the change. Try using imperative language in this line. A good commit message is "Add reactive variable for CPU clock speed". Worse examples include "cpu clock speed" or "Added Meteor.CPU_speed so that we can avoid a setTimeout in the main example."
+커밋의 첫 줄은 50자 이하이어야 한다.  
+이 줄에 변경사항을 명확하게 요약하여 작성한다. 잘 작성된 커밋메시지의 예로, "CPU 클럭 스피드를 위한 반응형 변수 추가"와 같이 작성한다. 좋지 않은 예제로, "CPU 클럭 스피드", "Meteor.CPU_speed를 추가하여 주 예제에서 setTimeout을 피할 수 있음"와 같은 것들이 있다.  
 
-Subsequent lines (if any) can be fairly verbose and detailed. Use your judgement.
+그 다음줄부터는 충분히 상세하게 작성하도록 한다.   
 
-Whitespace
 
-2 space indents (setq js-indent-level 2)
-spaces, not literal tabs (setq-default indent-tabs-mode nil)
-no trailing whitespace (setq-default show-trailing-whitespace t)
-maximum line length 80 (setq-default fill-column 80)
-Emacs users should check out js2-mode for a nice way to avoid silly javascript errors, and help enforce standards.
+### 공백문자
 
-Line length
+* 2칸 들여쓰기
+* 탭을 사용하지 않고, 그냥 공백문자를 삽입
+* 공백문자를 뒤에 붙이지 않음
+* 한 줄에 최대 80자 유지
+
+### 한 줄의 길이
+
 
 Source code. Try to stick to 80 characters per line. Comments should be line-wrapped to under 80 characters. It's OK to occasionally go over 80 characters if it substantially improves later indentation, or if there is no good way to break the line.
 
