@@ -1,6 +1,12 @@
-This is a set of guidelines for writing clear, organized, high-quality code that is consistent with the code in Meteor core.
+미티어 스타일 가이드
+====================
 
-All code in pull requests should follow these rules. Anyone writing a Meteor app or package is encouraged to follow this guide as well!
+이 책은 [Meteor Style Guide](https://github.com/meteor/meteor/wiki/Meteor-Style-Guide)에 근거하여 작성되었습니다.
+
+이 책은 미티어 앱을 작성할 때, 코드 작성을 위한 가이드라인을 제공합니다.
+
+모든 미티어앱은 다음의 가이드라인에 따라서 작성하기를 권고합니다.
+
 
 Commit messages
 
