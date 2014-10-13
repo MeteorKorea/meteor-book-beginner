@@ -20,5 +20,15 @@ $ tar zxvpf filename.tar.gz
 `bundle` 디렉토리의 `README` 파일을 읽어보면, 설치 방법이 안내되어 있다.
 
 
+### 설치 실행  
+README 파일의 설치 안내를 보면, 3단계로 이루어진다:
+
+1. `npm install` 실행  
+2. 환경변수 `export`  
+3. 앱 실행  
+
+이 절차를 순서대로 진행한다.
+
+
 
 * publish  
